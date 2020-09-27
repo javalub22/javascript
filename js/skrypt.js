@@ -24,11 +24,19 @@ function changeStaleToWarning(formElement) {
 }
 
 function showWarning() {
-    document.getElementById('warning')
-        .removeAttribute('hidden');
+    if (document.getElementById('warning') === null) {
+        let warning =
+            '<div id="warning" class="w-25 mx-auto align-middle alert alert-danger alert-dismissible fade show" role="alert">\n' +
+            '    Zaznaczone pola muszą zostać wypełnione!\n' +
+            '    <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
+            '        <span aria-hidden="true">&times;</span>\n' +
+            '    </button>\n' +
+            '</div>';
+        document.body.insertAdjacentHTML('beforeend', warning);
+    }
 }
 
 function hideWarning() {
     document.getElementById('warning')
-        .setAttribute('hidden', '');
+        .remove();
 }

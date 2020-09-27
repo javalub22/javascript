@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
     <title>Javascript</title>
 </head>
 <body>
-<form name="contactForm" action="index.html" method="get" onsubmit=" return validateForm('contactForm')">
+<form class="" name="contactForm" action="index.html" method="get" onsubmit=" return validateForm('contactForm')">
     <label>imię<input type="text" name="firstname"></label>
     <label>nazwisko<input type="text" name="surname"></label>
     <button type="submit">Wyślij</button>
 </form>
-<p id="warning" class="warning" hidden="" onclick="hideWarning()">Zaznaczone pola muszą zostać wypełnione</p>
-
-<script src="skrypt.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/skrypt.js"></script>
 </body>
 </html>
