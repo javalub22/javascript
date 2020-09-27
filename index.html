@@ -5,8 +5,12 @@
     <title>Javascript</title>
 </head>
 <body>
-<p id="foobar">Foo bar!</p>
-<button onclick="swap()">Kliknij mnie</button>
+<form name="contactForm" action="index.html" method="get" onsubmit=" return validateForm()">
+    <label>imię<input type="text" name="firstname"></label>
+    <label>nazwisko<input type="text" name="surname"></label>
+    <button type="submit">Wyślij</button>
+</form>
+
 <script src="skrypt.js"></script>
 </body>
 </html>
